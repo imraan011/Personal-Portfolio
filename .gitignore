@@ -55,3 +55,7 @@ vite.config.*.timestamp-*
 # Personal notes — keep private, don't push
 MY_TODO.txt
 PRIVATE_NOTES.txt
+
+
+README.md
+DOS_AND_DONTS.md

@@ -7,7 +7,14 @@ import { personalInfo } from '../data/personalInfo';
 import { motion } from 'framer-motion';
 import FloatingTechTags from '../components/FloatingTechTags';
 
-const ROLES = ['Full Stack Developer', 'React Developer', 'Node.js Engineer', 'Problem Solver'];
+const ROLES = [
+  'Full Stack Developer',
+  'MERN Stack Developer',
+  'React Native Developer',
+  'Node.js Engineer',
+  'UI/UX Enthusiast',
+  'Problem Solver'
+];
 const SOCIAL_LINKS = [
   { label: 'GitHub',   href: 'https://github.com/imraan011' },
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/ishtikharkhan/' },
@@ -21,7 +28,7 @@ const childVariants = {
 };
 
 export default function Hero() {
-  const role = useTypewriter(ROLES);
+  const role = useTypewriter(ROLES, 50, 30, 800);
 
   return (
     <section id="home" className="relative min-h-[85vh] flex items-center overflow-hidden py-20 bg-transparent transition-colors duration-300">
