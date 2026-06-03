@@ -10,15 +10,15 @@ import FloatingTechTags from '../components/FloatingTechTags';
 const ROLES = [
   'Full Stack Developer',
   'MERN Stack Developer',
-  'React Native Developer',
+  'React Developer',
   'Node.js Engineer',
   'UI/UX Enthusiast',
   'Problem Solver'
 ];
 const SOCIAL_LINKS = [
-  { label: 'GitHub',   href: 'https://github.com/imraan011' },
+  { label: 'GitHub', href: 'https://github.com/imraan011' },
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/ishtikharkhan/' },
-  { label: 'Email',    href: 'mailto:ishtikharkhan.dev@gmail.com' },
+  { label: 'Email', href: 'mailto:ishtikharkhan.dev@gmail.com' },
 ];
 
 const containerVariants = { hidden: {}, show: { transition: { staggerChildren: 0.12 } } };
