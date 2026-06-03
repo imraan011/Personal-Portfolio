@@ -1,0 +1,40 @@
+# .rules — Portfolio Project Rules
+# Antigravity reads this file to generate consistent code throughout the project.
+
+## Tech Stack
+- React 18 + Vite + Tailwind CSS
+- No class components — only functional + hooks
+- JS (no TypeScript for now)
+- lucide-react for icons (no Github/Linkedin icons — use SVG inline instead)
+
+## Code Style
+- Component names: PascalCase (e.g. ProjectCard.jsx)
+- Functions/variables: camelCase
+- No inline styles — use Tailwind classes only
+- Max 80 lines per component — split if bigger
+
+## Folder Structure
+- Each section = src/sections/SectionName.jsx
+- Reusable UI = src/components/
+- All hardcoded data = src/data/ (not in JSX)
+- Custom hooks = src/hooks/
+- Images/assets = src/assets/
+- Helper functions = src/utils/
+
+## Quality Rules
+- No hardcoded text in JSX — put in data files
+- Every component must have a JSDoc comment describing its purpose
+- No console.log in production code
+- Responsive design mandatory (mobile-first)
+- PropTypes used where props are passed
+
+## Naming Conventions
+- Files: PascalCase for components, camelCase for utils and hooks
+- CSS classes: use Tailwind only, no custom CSS unless absolutely necessary
+- Images: descriptive names (profile-photo.webp not img1.jpg)
+
+## Scalability
+- New project = only update src/data/projects.js
+- New skill = only update src/data/skills.js
+- New experience = only update src/data/experience.js
+- Sections must be independently removable/addable in App.jsx
