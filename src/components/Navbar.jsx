@@ -9,12 +9,13 @@ import ThemeSwitcher from './ThemeSwitcher';
 import NavbarMobile from './NavbarMobile';
 
 const NAV_LINKS = [
-  { label: 'Home',       href: '#home' },
-  { label: 'About',      href: '#about' },
-  { label: 'Projects',   href: '#projects' },
-  { label: 'Skills',     href: '#skills' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Contact',    href: '#contact' },
+  { label: 'Home',           href: '#home' },
+  { label: 'About',          href: '#about' },
+  { label: 'Projects',       href: '#projects' },
+  { label: 'Skills',         href: '#skills' },
+  { label: 'Experience',     href: '#experience' },
+  { label: 'Certifications', href: '#certifications' },
+  { label: 'Contact',        href: '#contact' },
 ];
 
 const SECTION_IDS = NAV_LINKS.map((l) => l.href.slice(1));

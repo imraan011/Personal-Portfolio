@@ -26,8 +26,11 @@ export function useTypewriter(words, typeSpeed = 80, deleteSpeed = 50, pauseMs =
       }, deleteSpeed);
 
       if (displayText === '') {
-        setIsDeleting(false);
-        setWordIndex((prev) => prev + 1);
+        const nextTimer = setTimeout(() => {
+          setIsDeleting(false);
+          setWordIndex((prev) => prev + 1);
+        }, 0);
+        return () => clearTimeout(nextTimer);
       }
     } else {
       timer = setTimeout(() => {

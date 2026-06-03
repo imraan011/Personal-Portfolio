@@ -9,6 +9,7 @@ import About from './sections/About';
 import Projects from './sections/Projects';
 import Skills from './sections/Skills';
 import Experience from './sections/Experience';
+import Certifications from './sections/Certifications';
 import Contact from './sections/Contact';
 import Footer from './components/Footer';
 import CanvasBackground from './components/CanvasBackground';
@@ -31,6 +32,7 @@ export default function App() {
           <Projects />
           <Skills />
           <Experience />
+          <Certifications />
           <Contact />
         </main>
         <Footer />
