@@ -13,10 +13,14 @@ import Certifications from './sections/Certifications';
 import Contact from './sections/Contact';
 import Footer from './components/Footer';
 import CanvasBackground from './components/CanvasBackground';
+import CustomCursor from './components/CustomCursor';
 
 export default function App() {
   return (
     <div className="relative min-h-screen bg-surface text-text font-sans transition-colors duration-300">
+      {/* Custom Magic Cursor */}
+      <CustomCursor />
+
       {/* Global Background Animation & Grid */}
       <div className="fixed inset-0 pointer-events-none z-0" aria-hidden="true">
         <div className="absolute inset-0 grid-overlay" />

@@ -4,23 +4,24 @@
  */
 import PropTypes from 'prop-types';
 import { Briefcase, GraduationCap, Code } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const TYPE_ICON = {
   education: <GraduationCap size={15} />,
-  training:  <Code size={15} />,
-  work:      <Briefcase size={15} />,
+  training: <Code size={15} />,
+  work: <Briefcase size={15} />,
 };
 
 const TYPE_NODE = {
   education: 'bg-primary border-primary/20 text-white shadow-md shadow-primary/20',
-  training:  'bg-accent border-accent/20 text-white shadow-md shadow-accent/20',
-  work:      'bg-surface-3 border-surface-3 text-text-muted shadow-sm',
+  training: 'bg-accent border-accent/20 text-white shadow-md shadow-accent/20',
+  work: 'bg-surface-3 border-surface-3 text-text-muted shadow-sm',
 };
 
 const TYPE_LABEL = {
   education: { text: 'Education', cls: 'text-primary border-primary/20 bg-primary/5' },
-  training:  { text: 'Training',  cls: 'text-accent border-accent/20 bg-accent/5' },
-  work:      { text: 'Work',      cls: 'text-text-muted border-surface-3 bg-surface-3/30' },
+  training: { text: 'Training', cls: 'text-accent border-accent/20 bg-accent/5' },
+  work: { text: 'Work', cls: 'text-text-muted border-surface-3 bg-surface-3/30' },
 };
 
 export default function ExperienceCard({ type, title, organization, location, period, description }) {
@@ -29,7 +30,13 @@ export default function ExperienceCard({ type, title, organization, location, pe
   const nodeCls = TYPE_NODE[type] ?? TYPE_NODE.work;
 
   return (
-    <div className="relative pl-8">
+    <motion.div
+      initial={{ opacity: 0, y: 35 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-60px" }}
+      transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+      className="relative pl-8"
+    >
       {/* Timeline node */}
       <span
         className={`absolute -left-[17px] top-1 w-8 h-8 rounded-full border-2 flex items-center justify-center ${nodeCls}`}
@@ -65,15 +72,15 @@ export default function ExperienceCard({ type, title, organization, location, pe
           {description}
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
 ExperienceCard.propTypes = {
-  type:         PropTypes.oneOf(['education', 'training', 'work']).isRequired,
-  title:        PropTypes.string.isRequired,
+  type: PropTypes.oneOf(['education', 'training', 'work']).isRequired,
+  title: PropTypes.string.isRequired,
   organization: PropTypes.string.isRequired,
-  location:     PropTypes.string,
-  period:       PropTypes.string.isRequired,
-  description:  PropTypes.string.isRequired,
+  location: PropTypes.string,
+  period: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
 };
