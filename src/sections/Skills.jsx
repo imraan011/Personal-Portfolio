@@ -3,6 +3,7 @@
  * @description Categorized skill pill badges with level dots and legends.
  * Data from src/data/skills.js — update there, reflects here automatically.
  */
+
 import { skills, skillCategories } from '../data/skills';
 import Layout from '../components/Layout';
 import SkillCategory from '../components/SkillCategory';

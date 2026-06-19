@@ -543,15 +543,36 @@
   animation: scrollDot 2s ease-in-out infinite;
 }
 
-.tag-float-1 { animation: floatTag1 5.5s ease-in-out infinite alternate; }
-.tag-float-2 { animation: floatTag2 6.8s ease-in-out infinite alternate; }
-.tag-float-3 { animation: floatTag3 5s ease-in-out infinite alternate; }
-.tag-float-4 { animation: floatTag4 7.5s ease-in-out infinite alternate; }
-.tag-float-5 { animation: floatTag5 6.2s ease-in-out infinite alternate; }
+.tag-float-1 {
+  animation: floatTag1 5.5s ease-in-out infinite alternate;
+}
+
+.tag-float-2 {
+  animation: floatTag2 6.8s ease-in-out infinite alternate;
+}
+
+.tag-float-3 {
+  animation: floatTag3 5s ease-in-out infinite alternate;
+}
+
+.tag-float-4 {
+  animation: floatTag4 7.5s ease-in-out infinite alternate;
+}
+
+.tag-float-5 {
+  animation: floatTag5 6.2s ease-in-out infinite alternate;
+}
 
 /* Custom cursor styling for fine pointers */
 @media (pointer: fine) {
-  a, button, [role="button"], input, select, textarea, [data-cursor] {
+
+  a,
+  button,
+  [role="button"],
+  input,
+  select,
+  textarea,
+  [data-cursor] {
     cursor: none !important;
   }
 }
