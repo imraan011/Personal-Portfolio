@@ -8,16 +8,22 @@
  *  Set to `false` to make that section fully live and interactive.
  *
  *  You never need to touch the section JSX files — just edit here.
- * 
- * 
- *exapmle show this section under development
-import UnderDevelopmentOverlay from '../components/UnderDevelopmentOverlay';
-import { siteConfig } from '../data/siteConfig';
-
-<UnderDevelopmentOverlay active={siteConfig.underDevelopment.skills}>
-  {  your section content  }
- </UnderDevelopmentOverlay>
-
+ * ─────────────────────────────────────────────────────────────────
+ *
+ *  HOW TO LOCK ANY SECTION (e.g. Skills):
+ *
+ *  1. In this file → set  skills: true
+ *
+ *  2. In the section file (e.g. Skills.jsx) add at the top:
+ *       import { siteConfig } from '../data/siteConfig';
+ *       import UnderDevelopmentOverlay from '../components/UnderDevelopmentOverlay';
+ *
+ *  3. Inside return(), wrap the section CONTENT (not the <section> tag):
+ *       <UnderDevelopmentOverlay active={siteConfig.underDevelopment.skills}>
+ *         ... your content here ...
+ *       </UnderDevelopmentOverlay>
+ *
+ *  To go live: set the flag back to false — overlay disappears instantly.
  * ─────────────────────────────────────────────────────────────────
  */
 
