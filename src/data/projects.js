@@ -7,6 +7,8 @@
 
 import aiResumeImg from '../assets/AI-Resume.png';
 import Portfolio from '../assets/ScreenRecording2026-07-14003759-ezgif.com-video-to-gif-converter.gif';
+import SketchFlow from '../assets/ScreenRecording2026-07-14014852-ezgif.com-video-to-gif-converter.gif';
+
 
 export const projects = [
   {
@@ -29,7 +31,7 @@ export const projects = [
     category: 'Frontend',
     github: 'https://github.com/imraan011/Sketchflow',
     live: "https://sketchflow-three.vercel.app/",
-    image: null,
+    image: SketchFlow,
   },{
     id:3,
     title: 'Portfolio Website',
