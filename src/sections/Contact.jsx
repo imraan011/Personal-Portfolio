@@ -1,19 +1,10 @@
-/**
- * @section Contact
- * @description Contact page layout, wrapping ContactInfo and ContactForm subcomponents with premium animations.
- */
 import { motion } from 'framer-motion';
-import ContactInfo from '../components/ContactInfo';
-import ContactForm from '../components/ContactForm';
+import { personalInfo } from '../data/personalInfo';
 import Layout from '../components/Layout';
 
 const containerVariants = {
   hidden: {},
-  show: {
-    transition: {
-      staggerChildren: 0.15,
-    },
-  },
+  show: { transition: { staggerChildren: 0.08 } },
 };
 
 const childVariants = {
@@ -22,43 +13,70 @@ const childVariants = {
 };
 
 export default function Contact() {
-  return (
-    <section id="contact" className="relative py-24 bg-surface-2/15 border-t border-surface-3/30 overflow-hidden">
-      {/* Decorative ambient orbs */}
-      <div
-        className="w-[300px] h-[300px] rounded-full bg-primary/10 blur-[100px] absolute -top-12 -left-12 pointer-events-none orb-float-1"
-        aria-hidden="true"
-      />
-      <div
-        className="w-[350px] h-[350px] rounded-full bg-accent/8 blur-[120px] absolute -bottom-16 -right-16 pointer-events-none orb-float-2"
-        aria-hidden="true"
-      />
+  const email = personalInfo.contact.email;
+  const github = personalInfo.contact.socials.github;
+  const linkedin = personalInfo.contact.socials.linkedin;
 
+  return (
+    <section id="contact" className="py-32 bg-[#121212]">
       <Layout>
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.15 }}
-          className="relative z-10"
+          className="max-w-3xl"
         >
           {/* Header */}
           <motion.p
             variants={childVariants}
-            className="text-primary font-semibold text-sm tracking-widest uppercase mb-3"
+            className="text-primary font-mono text-xs uppercase tracking-[0.2em] mb-4"
           >
-            Get In Touch
+            [ Connect ]
           </motion.p>
           <motion.h2
             variants={childVariants}
-            className="font-display font-extrabold text-3xl sm:text-4xl text-text mb-12 tracking-tight"
+            className="font-display font-medium text-4xl sm:text-5xl text-text mb-8 tracking-tight"
           >
-            Contact
+            Get in touch
           </motion.h2>
 
-          <motion.div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
-            <ContactInfo />
-            <ContactForm />
+          <motion.p 
+            variants={childVariants} 
+            className="text-text-muted text-base leading-[1.6] font-light max-w-xl mb-12"
+          >
+            {personalInfo.contact.description}
+          </motion.p>
+
+          <motion.div 
+            variants={childVariants}
+            className="flex flex-col sm:flex-row sm:items-center gap-x-12 gap-y-6"
+          >
+            <a
+              href={`mailto:${email}`}
+              className="text-xl sm:text-2xl font-display font-medium text-text hover:text-primary transition-colors hover-underline"
+            >
+              {email}
+            </a>
+            
+            <div className="flex items-center gap-6">
+              <a
+                href={github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs font-mono tracking-widest text-text-muted hover:text-text hover-underline transition-colors"
+              >
+                GitHub
+              </a>
+              <a
+                href={linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs font-mono tracking-widest text-text-muted hover:text-text hover-underline transition-colors"
+              >
+                LinkedIn
+              </a>
+            </div>
           </motion.div>
         </motion.div>
       </Layout>

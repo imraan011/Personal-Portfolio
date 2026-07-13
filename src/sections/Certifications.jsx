@@ -15,13 +15,13 @@ const gridVariants = {
 
 export default function Certifications() {
   return (
-    <section id="certifications" className="py-24 bg-surface-2/25 border-y border-surface-3/50">
+    <section id="certifications" className="py-32 bg-[#0d0d0d]">
       <Layout>
         {/* Header */}
-        <p className="text-primary font-semibold text-sm tracking-widest uppercase mb-3">
-          Credentials
+        <p className="text-primary font-mono text-xs uppercase tracking-[0.2em] mb-4">
+          [ Credentials ]
         </p>
-        <h2 className="font-display font-bold text-3xl sm:text-4xl text-text mb-12">
+        <h2 className="font-display font-medium text-4xl sm:text-5xl text-text mb-16 tracking-tight">
           Certifications
         </h2>
 
@@ -31,7 +31,7 @@ export default function Certifications() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.15 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {certifications.map((cert) => (
             <CertificationCard key={cert.id} {...cert} />

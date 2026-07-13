@@ -25,25 +25,25 @@ export default function Experience() {
   });
 
   return (
-    <section id="experience" className="py-24 bg-surface/10">
+    <section id="experience" className="py-32 bg-[#0a0a0a]">
       <Layout>
         {/* Header */}
-        <p className="text-primary font-semibold text-sm tracking-widest uppercase mb-3">
-          Timeline
+        <p className="text-primary font-mono text-xs uppercase tracking-[0.2em] mb-4">
+          [ Timeline ]
         </p>
-        <h2 className="font-display font-bold text-3xl sm:text-4xl text-text mb-12">
+        <h2 className="font-display font-medium text-4xl sm:text-5xl text-text mb-16 tracking-tight">
           Experience
         </h2>
 
         {/* Timeline */}
         <div ref={containerRef} className="relative ml-4 flex flex-col gap-10">
           {/* Static Background Line */}
-          <div className="absolute left-[0.5px] top-0 bottom-0 w-[3px] bg-surface-3 origin-top rounded-full" />
+          <div className="absolute left-[0px] top-0 bottom-0 w-[1px] bg-surface-3 origin-top" />
           
           {/* Active Scroll-Linked Path */}
           <motion.div 
             style={{ scaleY }}
-            className="absolute left-[0.5px] top-0 bottom-0 w-[3px] bg-gradient-to-b from-primary via-accent to-primary origin-top shadow-[0_0_12px_rgba(99,102,241,0.65)] rounded-full z-10"
+            className="absolute left-[0px] top-0 bottom-0 w-[1px] bg-primary origin-top z-10"
           />
 
           {experiences.map((exp) => (

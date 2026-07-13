@@ -3,12 +3,10 @@
  * @description Mobile slide-out drawer menu for navigation links and resume CTA.
  */
 import PropTypes from 'prop-types';
-import { Download } from 'lucide-react';
-import ThemeSwitcher from './ThemeSwitcher';
 
 export default function NavbarMobile({ links, activeId, closeMenu }) {
   return (
-    <div className="md:hidden nav-glass border-t border-glass-border bg-surface-2/95 backdrop-blur-md">
+    <div className="md:hidden nav-glass border-t border-surface-3 bg-surface-2/95 backdrop-blur-md">
       <ul className="flex flex-col px-6 py-4 gap-2" role="list">
         {links.map(({ label, href }) => (
           <li key={href}>
@@ -25,19 +23,15 @@ export default function NavbarMobile({ links, activeId, closeMenu }) {
             </a>
           </li>
         ))}
-        <li className="pt-2 flex items-center justify-between border-t border-glass-border mt-2">
+        <li className="pt-4 flex items-center justify-center border-t border-surface-3 mt-2">
           <a
             href="/resume.pdf"
             download
             onClick={closeMenu}
-            className="flex items-center gap-2 px-4 py-2 rounded-lg border border-primary/30 text-primary text-sm font-semibold hover:bg-primary/5 transition-all duration-200"
+            className="w-full text-center py-2 rounded-[4px] border border-primary/30 text-primary text-sm font-medium hover:bg-primary/5 transition-[background-color,border-color] duration-200"
           >
-            <Download size={14} />
             Download Resume
           </a>
-          <div className="pr-2">
-            <ThemeSwitcher />
-          </div>
         </li>
       </ul>
     </div>

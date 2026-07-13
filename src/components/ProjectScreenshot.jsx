@@ -1,36 +1,31 @@
-/**
- * @component ProjectScreenshot
- * @description Renders the image screenshot or fallback initial-letter placeholder for a project card.
- */
 import PropTypes from 'prop-types';
 
 export default function ProjectScreenshot({ image, title, live }) {
   return (
-    <div className="relative aspect-video bg-surface-3/30 overflow-hidden">
+    <div className="relative aspect-video bg-[#0d0d0d] overflow-hidden">
       {image ? (
         <img
           src={image}
           alt={`${title} screenshot`}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
         />
       ) : (
-        /* Initial-letter placeholder */
+        /* Monospace placeholder */
         <div className="w-full h-full flex items-center justify-center select-none">
           <div className="flex flex-col items-center gap-2">
-            <span className="text-5xl font-display font-extrabold text-text/10">
-              {title.charAt(0)}
+            <span className="text-4xl font-mono font-medium text-text-muted/20">
+              {title.split(' ').map(w => w[0]).join('')}
             </span>
-            <span className="text-[10px] font-semibold text-text-muted/60 uppercase tracking-widest">
-              No preview
+            <span className="text-[9px] font-mono text-text-muted/40 uppercase tracking-widest">
+              [ No preview ]
             </span>
           </div>
         </div>
       )}
-      {/* In Progress badge overlaid on screenshot */}
+      {/* In Progress badge */}
       {!live && (
-        <span className="absolute top-3 right-3 text-[10px] font-bold uppercase tracking-wider
-                         text-amber-600 dark:text-amber-400 border border-amber-500/20 dark:border-amber-400/30
-                         bg-surface-2/90 backdrop-blur-sm px-2 py-0.5 rounded-full">
+        <span className="absolute top-3 right-3 text-[9px] font-mono uppercase tracking-widest
+                         text-text-muted border border-surface-3 bg-surface-2/95 px-2 py-0.5 rounded-[3px]">
           In Progress
         </span>
       )}

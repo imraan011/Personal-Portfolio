@@ -1,62 +1,54 @@
-/**
- * @component ProjectCard
- * @description Project card with screenshot, tech tag pills, and action links.
- */
 import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 import ProjectScreenshot from './ProjectScreenshot';
 import ProjectLinks from './ProjectLinks';
-import { use3DTilt } from '../hooks/use3DTilt';
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, y: 20 },
   show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
 };
 
 export default function ProjectCard({ title, description, tech, github, live, image }) {
-  const tilt = use3DTilt(6); // subtle perspective tilt
-
   return (
     <motion.article
-      ref={tilt.ref}
-      style={{ ...tilt.style }}
-      onMouseMove={tilt.onMouseMove}
-      onMouseLeave={tilt.onMouseLeave}
       variants={cardVariants}
-      className="glass-card rounded-2xl flex flex-col h-full overflow-hidden
-                 border border-surface-3 transition-[background-color,border-color] duration-300"
+      whileHover={{ scale: 1.02 }}
+      transition={{ duration: 0.2, ease: 'easeOut' }}
+      className="premium-card rounded-[4px] flex flex-col h-full overflow-hidden"
     >
-      <div style={{ transform: 'translateZ(25px)', transformStyle: 'preserve-3d' }} className="flex flex-col h-full flex-grow">
+      <div className="flex flex-col h-full flex-grow">
         {live ? (
           <a 
             href={live} 
             target="_blank" 
             rel="noopener noreferrer" 
             data-cursor="view"
-            className="block w-full overflow-hidden"
+            className="block w-full overflow-hidden border-b border-surface-3"
           >
             <ProjectScreenshot image={image} title={title} live={live} />
           </a>
         ) : (
-          <ProjectScreenshot image={image} title={title} live={live} />
+          <div className="block w-full overflow-hidden border-b border-surface-3">
+            <ProjectScreenshot image={image} title={title} live={live} />
+          </div>
         )}
 
-        <div className="p-5 flex flex-col flex-grow">
-          <h3 className="font-display font-bold text-base text-text leading-snug mb-2">
+        <div className="p-6 flex flex-col flex-grow">
+          <h3 className="font-display font-medium text-lg text-text mb-2 tracking-tight">
             {title}
           </h3>
 
-          <p className="text-text-muted text-sm leading-relaxed font-light line-clamp-2 flex-grow">
+          <p className="text-text-muted text-sm leading-[1.6] font-light flex-grow">
             {description}
           </p>
 
           {/* Tech pills */}
-          <div className="flex flex-wrap gap-1.5 mt-4">
+          <div className="flex flex-wrap gap-2 mt-6">
             {tech.map((t) => (
               <span
                 key={t}
-                className="text-[11px] font-semibold text-text border border-surface-3
-                           bg-surface-3/30 px-2 py-0.5 rounded-md"
+                className="font-mono text-[10px] text-text bg-surface-2 border border-surface-3
+                           px-2.5 py-0.5 rounded-[3px]"
               >
                 {t}
               </span>

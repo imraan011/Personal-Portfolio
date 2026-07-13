@@ -12,7 +12,7 @@ import SketchFlow from '../assets/ScreenRecording2026-07-14014852-ezgif.com-vide
 
 export const projects = [
   {
-    id:1,
+    id: 1,
     title: 'AI-POWERED RESUME ANALYSIS',
     description:
       'This is AI-POWERED RESUME ANALYSIS - a web application that uses artificial intelligence to analyze and interpret large datasets. It provides users with insights and recommendations based on their JD.',
@@ -21,9 +21,10 @@ export const projects = [
     github: 'https://github.com/imraan011/AI-Resume-Reviewer',
     live: "https://ai-resume-reviewer-kohl.vercel.app/",
     image: aiResumeImg,
+    featured: true,
   },
   {
-    id:2,
+    id: 2,
     title: "Sketchflow",
     description:
       'Draw shapes, sketch freehand, select and move elements, zoom into an infinite canvas, save your work locally, and export it as a portable JSON file — all without installing anything',
@@ -32,8 +33,9 @@ export const projects = [
     github: 'https://github.com/imraan011/Sketchflow',
     live: "https://sketchflow-three.vercel.app/",
     image: SketchFlow,
+    featured: true,
   },{
-    id:3,
+    id: 3,
     title: 'Portfolio Website',
     description:
       'This portfolio — built with React 18, Vite, and Tailwind CSS. Fully responsive, data-driven architecture.',
@@ -42,6 +44,7 @@ export const projects = [
     github: 'https://github.com/imraan011/Personal-Portfolio',
     live: "https://personal-portfolio-nine-virid.vercel.app/",
     image: Portfolio,
+    featured: true,
   },
    
   {
@@ -54,6 +57,7 @@ export const projects = [
     github: 'https://github.com/imraan011',
     live: null,
     image: null,
+    featured: false,
   },
 ];
 
