@@ -5,6 +5,8 @@
  * To add a screenshot: image: '/src/assets/projects/name.png'
  */
 
+import aiResumeImg from '../assets/AI-Resume.png';
+
 export const projects = [
   {
     id:1,
@@ -15,7 +17,7 @@ export const projects = [
     category: 'AI & Machine Learning',
     github: 'https://github.com/imraan011/AI-Resume-Reviewer',
     live: "https://ai-resume-reviewer-kohl.vercel.app/",
-    image: "/src/assets/AI-Resume.png",
+    image: aiResumeImg,
   },
   {
     id:2,
