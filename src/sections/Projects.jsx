@@ -15,7 +15,7 @@ import UnderDevelopmentOverlay from '../components/UnderDevelopmentOverlay';
 
 const gridVariants = {
   hidden: {},
-  show:   { transition: { staggerChildren: 0.1 } },
+  show: { transition: { staggerChildren: 0.1 } },
 };
 
 export default function Projects() {
@@ -37,39 +37,39 @@ export default function Projects() {
           Projects
         </h2>
 
-        <UnderDevelopmentOverlay active={isUnderDev}>
-          <ProjectFilters
-            categories={projectCategories}
-            activeFilter={activeFilter}
-            onFilterChange={setActiveFilter}
-          />
+        {/* <UnderDevelopmentOverlay active={isUnderDev}> */}
+        <ProjectFilters
+          categories={projectCategories}
+          activeFilter={activeFilter}
+          onFilterChange={setActiveFilter}
+        />
 
-          <AnimatePresence mode="wait">
-            {filtered.length > 0 ? (
-              <motion.div
-                key={activeFilter}
-                variants={gridVariants}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true, amount: 0.1 }}
-                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
-              >
-                {filtered.map((project) => (
-                  <ProjectCard key={project.id} {...project} />
-                ))}
-              </motion.div>
-            ) : (
-              <motion.p
-                key="empty"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                className="text-text-muted text-sm text-center py-16"
-              >
-                No projects in this category yet.
-              </motion.p>
-            )}
-          </AnimatePresence>
-        </UnderDevelopmentOverlay>
+        <AnimatePresence mode="wait">
+          {filtered.length > 0 ? (
+            <motion.div
+              key={activeFilter}
+              variants={gridVariants}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.1 }}
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+            >
+              {filtered.map((project) => (
+                <ProjectCard key={project.id} {...project} />
+              ))}
+            </motion.div>
+          ) : (
+            <motion.p
+              key="empty"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="text-text-muted text-sm text-center py-16"
+            >
+              No projects in this category yet.
+            </motion.p>
+          )}
+        </AnimatePresence>
+        {/* </UnderDevelopmentOverlay> */}
       </Layout>
     </section>
   );
