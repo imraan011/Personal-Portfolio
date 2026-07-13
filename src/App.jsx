@@ -34,7 +34,7 @@ export default function App() {
           <Hero />
           <About />
           <Projects />
-          <Skills />
+          {/* <Skills /> */}
           <Experience />
           <Certifications />
           <Contact />
