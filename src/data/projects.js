@@ -15,7 +15,7 @@ export const projects = [
     category: 'AI & Machine Learning',
     github: 'https://github.com/imraan011/AI-Resume-Reviewer',
     live: "https://ai-resume-reviewer-kohl.vercel.app/",
-    image: "./src/assets/AI-Resume.png",
+    image: "/src/assets/AI-Resume.png",
   },
   {
     id:2,
