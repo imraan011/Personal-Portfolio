@@ -6,7 +6,7 @@ import AboutPortrait from '../components/AboutPortrait';
 const STATS = [
   { value: '3+', label: 'Projects Built' },
   { value: '2+', label: 'Years Learning' },
-  { value: '100+', label: 'DSA Problems Solved' },
+  { value: '150+', label: 'DSA Problems Solved' },
 ];
 
 const containerVariants = {

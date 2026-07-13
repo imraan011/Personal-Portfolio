@@ -28,9 +28,12 @@ The portfolio has been redesigned to align with clean, professional, and dark vi
     *   `CanvasBackground.jsx` (obsolete background canvas animation)
     *   `ThemeSwitcher.jsx` (obsolete switcher buttons)
     *   `ContactForm.jsx` & `ContactInfo.jsx` (replaced by typographical contact links)
-    *   `InfoCard.jsx`, `InputField.jsx`, `ProjectFilters.jsx`
+    *   `InfoCard.jsx`, `InputField.jsx`, `ProjectFilters.jsx`, `FloatingTechTags.jsx`, `SocialLinks.jsx`, `UnderDevelopmentOverlay.jsx`
     *   `Skills.jsx` & `SkillCategory.jsx` (removed Skills section entirely from the page flow)
     *   `ThreeDimensionalCube.jsx` (removed to adopt the poster-style layout)
+    *   Folders: `src/components/icons/`, `src/components/ui/`, `src/lib/`
+    *   Data: `src/data/skills.js`, `src/data/siteConfig.js`
+    *   Styles: `src/App.css`
     *   Hooks: `useContactForm.js` (form validation), `useTypewriter.js` (typing animation), `use3DTilt.js` (tilt triggers)
 *   **Cleaned Dependencies**: Uninstalled `@emailjs/browser` from `package.json` as the email form logic is no longer loaded.
 
