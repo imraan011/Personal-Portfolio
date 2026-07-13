@@ -7,7 +7,18 @@
 
 export const projects = [
   {
-    id: 1,
+    id:1,
+    title: 'AI-POWERED RESUME ANALYSIS',
+    description:
+      'This is AI-POWERED RESUME ANALYSIS - a web application that uses artificial intelligence to analyze and interpret large datasets. It provides users with insights and recommendations based on their JD.',
+    tech: ['Next.js', 'React', 'Typescript', 'Tailwind CSS' , 'GSAP' , 'Lenis Scroll' ],
+    category: 'AI & Machine Learning',
+    github: 'https://github.com/imraan011/AI-Resume-Reviewer',
+    live: "https://ai-resume-reviewer-kohl.vercel.app/",
+    image: "./src/assets/AI-Resume.png",
+  },
+  {
+    id:2,
     title: 'Portfolio Website',
     description:
       'This portfolio — built with React 18, Vite, and Tailwind CSS. Fully responsive, data-driven architecture.',
@@ -18,7 +29,7 @@ export const projects = [
     image: null,
   },
   {
-    id: 2,
+    id: 3,
     title: 'Task Manager App',
     description:
       'A full-stack task management app with real-time updates, drag-and-drop, and user authentication.',
@@ -29,7 +40,7 @@ export const projects = [
     image: null,
   },
   {
-    id: 3,
+    id: 4,
     title: 'Weather Dashboard',
     description:
       'Real-time weather dashboard integrating OpenWeather API with dynamic charts and location search.',
