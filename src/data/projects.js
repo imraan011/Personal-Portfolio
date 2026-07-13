@@ -6,6 +6,7 @@
  */
 
 import aiResumeImg from '../assets/AI-Resume.png';
+import Portfolio from '../assets/ScreenRecording2026-07-14003759-ezgif.com-video-to-gif-converter.gif';
 
 export const projects = [
   {
@@ -21,26 +22,26 @@ export const projects = [
   },
   {
     id:2,
+    title: "Sketchflow",
+    description:
+      'Draw shapes, sketch freehand, select and move elements, zoom into an infinite canvas, save your work locally, and export it as a portable JSON file — all without installing anything',
+    tech: ["vanilla JS", "HTML", "CSS"],
+    category: 'Frontend',
+    github: 'https://github.com/imraan011/Sketchflow',
+    live: "https://sketchflow-three.vercel.app/",
+    image: null,
+  },{
+    id:3,
     title: 'Portfolio Website',
     description:
       'This portfolio — built with React 18, Vite, and Tailwind CSS. Fully responsive, data-driven architecture.',
     tech: ['React', 'Vite', 'Tailwind CSS'],
     category: 'Frontend',
-    github: 'https://github.com/imraan011/portfolio',
-    live: null,
-    image: null,
+    github: 'https://github.com/imraan011/Personal-Portfolio',
+    live: "https://personal-portfolio-nine-virid.vercel.app/",
+    image: Portfolio,
   },
-  {
-    id: 3,
-    title: 'Task Manager App',
-    description:
-      'A full-stack task management app with real-time updates, drag-and-drop, and user authentication.',
-    tech: ['React', 'Node.js', 'MongoDB'],
-    category: 'Full Stack',
-    github: 'https://github.com/imraan011',
-    live: null,
-    image: null,
-  },
+   
   {
     id: 4,
     title: 'Weather Dashboard',
