@@ -36,7 +36,7 @@ export default function App() {
             <About />
             <Projects />
             <Experience />
-            <Certifications />
+            {/* <Certifications /> */}
             <Contact />
           </main>
           <Footer />

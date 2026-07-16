@@ -6,7 +6,7 @@
  */
 
 import aiResumeImg from '../assets/AI-Resume.png';
-import Portfolio from '../assets/ScreenRecording2026-07-14003759-ezgif.com-video-to-gif-converter.gif';
+import Portfolio from '../assets/Portfolio.gif';
 import SketchFlow from '../assets/ScreenRecording2026-07-14014852-ezgif.com-video-to-gif-converter.gif';
 
 
