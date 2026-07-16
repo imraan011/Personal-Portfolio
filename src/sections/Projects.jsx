@@ -37,7 +37,7 @@ export default function Projects() {
         </motion.div>
 
         {/* Other Projects List */}
-        {otherProjects.length > 0 && (
+        {/* {otherProjects.length > 0 && (
           <div className="mt-32">
             <h3 className="font-display font-medium text-2xl text-text mb-8 tracking-tight">
               Archive & Other Work
@@ -100,7 +100,7 @@ export default function Projects() {
               ))}
             </div>
           </div>
-        )}
+        )} */}
       </Layout>
     </section>
   );
